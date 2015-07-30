@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Platarforma interativa par">
+    <meta name="description" content="Plataforma de aprendizado de vulnerabilidades Web.">
     <meta name="author" content="GRIS, Grupo de Resposta a Incidentes de Segurança">
 
     <link rel="icon" href="img/black_hat.png">
@@ -12,53 +12,14 @@
     <title>Fórum H4CK3R - Autenticação</title>
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <!-- <link href="navbar-fixed-top.css" rel="stylesheet">-->
+    <link href="bootstrap/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="css/autenticacao.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-
-  <style type="text/css">
-    <!-- 
-    .form-signin {
-      max-width: 330px;
-      margin: 0 auto;
-    }
-    .form-signin .form-signin-heading,
-    .form-signin .checkbox {
-      margin-bottom: 10px;
-    }
-    .form-signin .checkbox {
-      font-weight: normal;
-    }
-    .form-signin .form-control {
-      position: relative;
-      height: auto;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-      padding: 10px;
-      font-size: 16px;
-    }
-    .form-signin .form-control:focus {
-      z-index: 2;
-    }
-    .form-signin input[type="email"] {
-      margin-bottom: -1px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    .form-signin input[type="password"] {
-      margin-bottom: 10px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-    -->
-  </style>
 
   <body>
     <header class="navbar navbar-default navbar-fixed-top">
@@ -96,28 +57,52 @@
       </div>
     </header>
 
-    <nav>
-      <div class="container" style="margin-top: 100px;">
-        <div class="jumbotron" style="max-width: 500px; margin: 0 auto; padding-top: 30px;">
-          <form class="form-signin" method="post" action="#">
-            <h2 class="form-signin-heading">Autenticação</h2>
-            <label for="inputEmail" class="sr-only">Usuário ou e-mail</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="sr-only">Senha</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <nav class="container-fluid panel_auth">
+        <div class="jumbotron well">
+          
+          <form method="post" action="#">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="addon-username" onclick="document.getElementById('input-username').focus();">@</span>
+              <input type="text" class="form-control" placeholder="Usuário ou e-mail" aria-describedby="addon-username" id="input-username" name="input-username" maxlength="100" required autofocus>
+            </div> <br/>
+
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="addon-password" onclick="document.getElementById('input-password').focus();">
+                <span class="glyphicon glyphicon-lock"></span>
+              </span>
+              <input type="password" class="form-control" placeholder="Senha" aria-describedby="addon-password" id="input-password" name="input-password" maxlength="16" required>
+              <span class="input-group-addon" id="addon2-password">
+                <input checked data-toggle="toggle" data-on="<span class='glyphicon glyphicon-eye-close'></span>" data-off="<span class='glyphicon glyphicon-eye-open'></span>" data-size="mini" type="checkbox" id="toggle-event" />
+              </span>
+            </div>
+
             <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me"> Lembre-me
+              <label for="input-remeberme">
+                <input type="checkbox" value="t" id="input-remeberme" name="input-rememberme">Lembre-me
               </label>
             </div>
+
             <button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
           </form>
         </div>
-      </div>
     </nav>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap-toggle.min.js"></script>
+    
+    <script>
+      $(function() {
+        $('#toggle-event').change(function() {
+          if(!($(this).prop('checked'))) {
+            $('#input-password').attr("type", "text");
+          } else {
+            $('#input-password').attr("type", 'password');
+          }
+        })
+      });
+    </script>
+    
   </body>
 </html>

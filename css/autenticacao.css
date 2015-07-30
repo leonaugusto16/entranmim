@@ -1,0 +1,21 @@
+/*
+ *  Grupo de Resposta a Incidentes de Segurança/DCC/UFRJ
+ *
+ *  @author = GRIS
+ *  @email  = gris@gris.dcc.ufrj.br
+ *
+ *  Folha de estilos para a página ../css/index.html
+ */
+
+nav.panel_auth {
+    margin-top: 125px;
+    max-width: 500px;
+}
+
+nav.panel_auth form {
+    padding: 20px 0 10px 0;
+}
+
+nav.panel_auth form .input-group-addon {
+    cursor: default;
+}
