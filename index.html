@@ -24,7 +24,7 @@
   <body>
     <header class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -59,7 +59,7 @@
 
     <nav class="container-fluid panel_auth">
         <div class="jumbotron well">
-          
+
           <form method="post" action="#">
             <div class="input-group input-group-lg">
               <span class="input-group-addon" id="addon-username" onclick="document.getElementById('input-username').focus();">@</span>
@@ -70,7 +70,7 @@
               <span class="input-group-addon" id="addon-password" onclick="document.getElementById('input-password').focus();">
                 <span class="glyphicon glyphicon-lock"></span>
               </span>
-              <input type="password" class="form-control" placeholder="Senha" aria-describedby="addon-password" id="input-password" name="input-password" maxlength="16" required>
+              <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" id="input-password" name="input-password" maxlength="16" required>
               <span class="input-group-addon" id="addon2-password">
                 <input checked data-toggle="toggle" data-on="<span class='glyphicon glyphicon-eye-close'></span>" data-off="<span class='glyphicon glyphicon-eye-open'></span>" data-size="mini" type="checkbox" id="toggle-event" />
               </span>
@@ -91,7 +91,7 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap-toggle.min.js"></script>
-    
+
     <script>
       $(function() {
         $('#toggle-event').change(function() {
