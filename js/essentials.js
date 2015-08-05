@@ -9,7 +9,7 @@ function getCookie(cookie_name) {
             chr = chr.substring(1);
 
         if (chr.indexOf(name) == 0)
-            return chr.substring(name.length,c.length);
+            return chr.substring(name.length,chr.length);
     }
 
     return null;
