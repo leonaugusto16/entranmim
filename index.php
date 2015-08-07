@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+	if((isset($_SESSION['login'])) and (isset($_SESSION['password']))){
+		header('location:forum/index.php');
+	}
+	else{
+?>
 <html lang="BR">
   <head>
     <meta charset="utf-8">
@@ -124,3 +131,7 @@
 
   </body>
 </html>
+
+<?php
+}
+?>

@@ -16,7 +16,7 @@ function getCookie(cookie_name) {
 }
 
 /* Requires SHA1 */
-function checkSession(redirect_to)
+/*function checkSession(redirect_to)
 {
     if(!getCookie('usrname') || !getCookie('passwd') || !getCookie('auth_token'))
         document.cookie = "";
@@ -30,4 +30,4 @@ function checkSession(redirect_to)
 
     if(redirect_to)
       document.location.href = redirect_to;
-}
+}*/
