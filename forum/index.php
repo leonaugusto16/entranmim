@@ -1,3 +1,4 @@
+<?php require "../core/access_control.php"; ?>
 <!DOCTYPE html>
 <html lang="BR">
   <head>
@@ -14,8 +15,6 @@
     <link href="../3party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../3party/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../3party/bootstrap/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <script src="../3party/js/chksums.js" type="text/javascript"></script>
-    <script src="../js/essentials.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="../3party/js/html5shiv.min.js"></script>
@@ -79,7 +78,7 @@
     <div class="container-fluid">
       <header>
         <div class="row text-right" style="border-bottom: 1px solid #eee; margin: 0 auto; padding: 10px;">
-          <span class="glyphicon glyphicon-user"></span> <small id="">Claudio Netto</small> <a href="#"><span class="glyphicon glyphicon-off"></span></a>
+          <span class="glyphicon glyphicon-user"></span> <small id="">Claudio Netto</small> <a href="../core/logout.php"><span class="glyphicon glyphicon-off"></span></a>
         </div>
 
         <div class="row">
@@ -106,12 +105,12 @@
 
     	<div class="row" style="margin-top: 10px;">
         <section class="col-md-8">
-          <article id="subjects"></article>
+          <article id="subjects"><?php include "subject.php"; ?></article>
         </section>
 
         <aside class="col-md-4">
-    			<div id="news_topics"></div>
-          <div id="best_users"></div>
+    			<div id="news_topics"><?php include "news_topics.php"; ?></div>
+          <div id="best_users"><?php include "best_users.php"; ?></div>
         </aside>
     	</div>
 
@@ -154,12 +153,5 @@
     <script src="../3party/bootstrap/js/bootstrap.min.js"></script>
     <script src="../3party/bootstrap/js/bootstrap-toggle.min.js"></script>
 
-    <script>
-      $(function(){
-        $("#subjects").load("subject.php");
-        $("#news_topics").load("news_topics.php");
-        $("#best_users").load("best_users.php");
-      });
-    </script>
   </body>
 </html>

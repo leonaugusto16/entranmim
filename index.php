@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    if((isset($_SESSION['login'])) && (isset($_SESSION['password'])))
+        header('location: forum/');
+?>
 <!DOCTYPE html>
 <html lang="BR">
   <head>
@@ -14,8 +20,6 @@
     <link href="3party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="3party/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="3party/bootstrap/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <script src="3party/js/chksums.js" type="text/javascript"></script>
-    <script src="js/essentials.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="3party/js/html5shiv.min.js"></script>
@@ -40,7 +44,7 @@
     </style>
   </head>
 
-  <body onload="checkSession();">
+  <body>
     <header class="navbar navbar-default navbar-fixed-top">
       <div class="container">
 
@@ -78,7 +82,17 @@
 
     <nav class="container-fluid panel_auth">
         <div class="jumbotron well">
-          <form method="post" action="auth.php">
+          <?php
+            if(isset($_COOKIE['error'])){
+          ?>
+          <div class="alert alert-danger" id="auth_alert" style="display: block;">
+            <strong>Atenção!</strong> <span><?php echo $_COOKIE['error']; ?></span>
+            <small><a href="#" id="hide-alert">Ocultar</a></small>
+          </div>
+          <?php
+            }
+          ?>
+          <form method="post" action="core/auth.php">
             <div class="input-group input-group-lg">
               <span class="input-group-addon" id="addon-username" onclick="document.getElementById('input-username').focus();">@</span>
               <input type="text" class="form-control" placeholder="Usuário ou e-mail" aria-describedby="addon-username" id="input-username" name="input-username" maxlength="100" required autofocus>
@@ -118,7 +132,11 @@
           } else {
             $('#input-password').attr("type", 'password');
           }
-        })
+        });
+
+        $("#hide-alert").click(function(){
+          $("#auth_alert").hide();
+        });
       });
     </script>
 

@@ -1,3 +1,5 @@
+<?php require "../core/access_control.php"; ?>
+
 <div class="panel-group" id="panel-news">
   <div class="panel panel-default">
     <div class="panel-heading text-right" data-toggle="collapse" data-parent="#panel-news" href="#panel-element-news" title="Clique para encolher/expandir">

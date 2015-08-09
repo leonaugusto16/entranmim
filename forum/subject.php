@@ -1,3 +1,5 @@
+<?php require "../core/access_control.php"; ?>
+
 <div class="panel-group" id="panel-ethical_hacker" title="Clique para encolher/expandir">
   <div class="panel panel-primary">
     <div class="panel-heading" data-toggle="collapse" data-parent="#panel-ethical_hacker" href="#panel-element-ethacker" style="cursor: pointer;">

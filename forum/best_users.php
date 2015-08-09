@@ -1,3 +1,5 @@
+<?php require "../core/access_control.php"; ?>
+
 <div class="panel-group" id="panel-best_users">
   <div class="panel panel-default">
     <div class="panel-heading text-right" data-toggle="collapse" data-parent="#panel-best_user" href="#panel-element-best_users" title="Clique para encolher/expandir">
