@@ -1,6 +1,6 @@
 {
-    "host":     "10.0.0.4",
-    "dbname":   "entranmim",
-    "user":     "gris",
-    "password": "12345678"
+    "host":     "SERVER",
+    "dbname":   "DBNAME",
+    "user":     "USER",
+    "password": "PASSWORD"
 }
