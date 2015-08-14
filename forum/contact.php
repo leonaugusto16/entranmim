@@ -16,11 +16,6 @@
     <link href="../3party/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../3party/bootstrap/css/bootstrap-toggle.min.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-      <script src="../3party/js/html5shiv.min.js"></script>
-      <script src="../3party/js/respond.min.js"></script>
-    <![endif]-->
-
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
@@ -53,16 +48,14 @@
       	</div>
       </header>
 
-    	<div class="row" style="margin-top: 10px;">
-          <section class="col-md-8">
-            <article id="subjects"><?php require("subject.php"); ?></article>
-          </section>
-  
-          <aside class="col-md-4">
-       	    <div id="news_topics"><?php require("news_topics.php"); ?></div>
-            <div id="best_users"><?php require("best_users.php"); ?></div>
-          </aside>
-    	</div>
+	<form method="post" action="#">
+          <label for="nome">Nome</label><input type="text" id="nome" name="nome" value=""/><br/>
+          <label for="email">Email</label><input type="text" id="email" name="email" value=""/><br/>
+          <label for="assunto">Assunto</label><input type="text" id="assunto" name="assunto" value=""/><br/>
+          <label for="mensagem">Mensagem:</label><br/><textarea id="mensagem" name="mensagem"></textarea><br><br>
+          <input type="submit" class="button" value="ENVIAR"/>
+        </form>
+
 
       <footer class="row">
         <div class="content_footer">

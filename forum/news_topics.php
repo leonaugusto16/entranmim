@@ -7,7 +7,14 @@
     </div>
     <div id="panel-element-news" class="panel-collapse collapse in">
       <div class="panel-body">
-        Novas postagens...
+        <ul class="newsticker list-unstyled" style=" overflow: hidden;">
+	  <li><a href="https://www.google.com" target="_blank" style="color: blue">Mais recente</a></li>
+	  <li style="margin-top: 1%;"><a href="https://www.google.com" target="_blank" style="color: blue">Nem tão recente</a></li>
+	  <li style="margin-top: 1%;"><a href="https://www.google.com" target="_blank" style="color: blue">Meio termo</a></li>
+	  <li style="margin-top: 1%;"><a href="https://www.google.com" target="_blank" style="color: blue">Quase velha</a></li>
+	  <li style="margin-top: 1%;"><a href="https://www.google.com" target="_blank" style="color: blue">Velha pakaralho</a></li>
+<!-- PR ALGUM MOTIVO OS ITENS QUANDO SÃO PEQUENOS ESTÃO FICANDO LADO A LADO-->
+	</ul>	
       </div>
     </div>
   </div>
